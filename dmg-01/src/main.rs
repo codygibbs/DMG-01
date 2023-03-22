@@ -75,7 +75,7 @@ fn run(mut cpu: CPU, mut window: Window) {
                     | (pixel[1] as u32) << 8
                     | (pixel[0] as u32)
             }
-            window.update_with_buffer(&buffer).unwrap();
+            window.update_with_buffer(&buffer, 160, 144).unwrap();
             cycles_elapsed_in_frame = 0;
         } else {
             sleep(Duration::from_nanos(2))
